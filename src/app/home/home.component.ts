@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -7,11 +8,10 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  items: any = [];
+  items: Observable<any[]> | undefined;
   constructor(private db: AngularFireDatabase) {}
 
   ngOnInit(): void {
-    this.items = this.db.list('items');
-    console.log(this.items);
+    this.items = this.db.list('items').valueChanges();
   }
 }
