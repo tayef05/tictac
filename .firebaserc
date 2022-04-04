@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "tictac-05": {
+      "hosting": {
+        "tictac": [
+          "tictac-05"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "tictac-05"
+  }
+}
