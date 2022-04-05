@@ -1,0 +1,27 @@
+.flex {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  text-align: center;
+  font-family: cursive;
+  padding: 20px 50px;
+  flex-wrap: wrap;
+}
+div.title {
+  font-size: 25px;
+  color: #03a9f4;
+}
+div.price {
+  padding: 10px 0;
+  color: #00bcd4;
+}
+div.insturctor {
+  color: #00bcd4;
+  font-size: 19px;
+}
+.item {
+  width: 250px;
+}
+img {
+  width: 150px;
+}

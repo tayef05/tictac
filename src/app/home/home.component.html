@@ -1,5 +1,12 @@
-<ul>
-  <li *ngFor="let item of items | async">
-    {{ item | json }}
-  </li>
-</ul>
+<div class="flex">
+  <div class="item" *ngFor="let item of items | async">
+    <div>
+      <img [src]="image | async" alt="The dammy image" />
+    </div>
+    <div style="color: #673ab7">
+      <div class="title">{{ item["course_title"] }}</div>
+      <div class="price">{{ item["price"] }}</div>
+      <div class="insturctor">{{ item["instructor"] }}</div>
+    </div>
+  </div>
+</div>
